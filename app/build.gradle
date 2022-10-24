@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+//            applicationId "com.cybermandarin.convertcoordinates"
+//            minSdkVersion 21
+//            targetSdkVersion 30
+//            versionCode 1
+//            versionName "1.0"
+        }
+    }
+    compileSdkVersion 26
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.truiton.screencapture"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    ndkVersion '21.3.6528147'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:23.2.1'
+    implementation 'com.android.support:design:23.2.1'
+
+    implementation 'com.rmtheis:tess-two:9.1.0'
+//    implementation 'org.geotools:gt-metadata:18.3'
+//    implementation 'com.github.zakgof:velvet-video:0.5.2'
+//    implementation 'com.github.zakgof:velvet-video-natives:0.2.8.full'
+//    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever-core:1.0.16'
+//    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever-native:1.0.16'
+//
+//    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever-core:1.0.16'
+//    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever-native-armeabi-v7a:1.0.16'
+//    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever-native-x86:1.0.16'
+//    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever-native-x86_64:1.0.16'
+//    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever-native-arm64-v8a:1.0.16'
+}
